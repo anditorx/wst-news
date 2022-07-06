@@ -134,6 +134,35 @@
                         }
                     }
                 }
+            },
+            "post": {
+                "description": "Create news",
+                "tags": [
+                    "news"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "User object that needs to be added to the store",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/News"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                }
             }
             
         },
