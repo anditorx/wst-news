@@ -26,22 +26,11 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    },
-                    "404": {
-                        "description": "Data Not Found",
-                        "content": {
-                          "application/json": {},
-                          "application/xml": {}
-                        }
-                    },
-                    "405": {
-                        "description": "Method Not Allowed",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category"
+                                }
+                            }
                         }
                     }
                 }
