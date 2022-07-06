@@ -52,7 +52,7 @@
                         "required": true
                     },
                     "image": {
-                        "type": "file",
+                        "type": "string",
                         "required": true
                     },
                     "author": {
