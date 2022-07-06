@@ -15,20 +15,6 @@ const apiDocumentation = require("./apidocs.json");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apiDocumentation));
 // End Swagger
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader(
-//     "Access-Control-Allow-Origin-Methods",
-//     "GET, POST, PUT, PATCH, DELETE, OPTIONS"
-//   );
-//   res.setHeader(
-//     "Access-Control-Allow-Headers",
-//     "Content-Type",
-//     "Authorization"
-//   );
-//   next();
-// });
-
 // handling upload image
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
