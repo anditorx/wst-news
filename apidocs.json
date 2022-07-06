@@ -1,0 +1,40 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "wst-news",
+        "description": "web service test - news",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://wst-news.herokuapp.com/v1/api",
+            "description": "production"
+        },
+        {
+            "urlDev": "http://localhost:3030/v1/api",
+            "description": "development"
+        }
+    ],
+    "paths": {
+        "/news": {
+            "get": {
+                "description": "Get all news",
+                "tags": [
+                    "news"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/News"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

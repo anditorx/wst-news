@@ -9,6 +9,12 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
 
+// Swagger
+const swaggerUi = require("swagger-ui-express");
+const apiDocumentation = require("./apidocs.json");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apiDocumentation));
+// End Swagger
+
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   res.setHeader(
@@ -66,11 +72,13 @@ app.use((error, req, res, next) => {
 });
 
 // serve
-const PORT = process.env.PORT || 3030;
+// const PORT = process.env.PORT || 3030;
+const PORT = 3030;
 mongoose
   .connect(
     "mongodb+srv://andito:rYzyTIVsJSDcqSsd@cluster0.7xk47.mongodb.net/myBlog?retryWrites=true&w=majority"
   )
+
   .then(() => {
     app.listen(PORT, () => console.log("Connection success"));
   })
