@@ -35,6 +35,40 @@
                         "format": "date-time"
                     }
                 }
+            },
+            "News": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "category": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "body": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "image": {
+                        "type": "file",
+                        "required": true
+                    },
+                    "author": {
+                        "type": "string",
+                        "required": true,
+                        "value": "Andito"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
             }
         }
     },
