@@ -18,6 +18,26 @@
             "description": "[dev]"
         }
     ],
+    "components": {
+        "schemas": {
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        }
+    },
     "paths": {
         "/category": {
             "get": {
@@ -40,15 +60,20 @@
                 "tags": [
                     "category"
                 ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Category"
-                            }
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "User object that needs to be added to the store",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Category"
                         }
                     }
-                },
+                ],
                 "responses": {
                     "200": {
                         "description": "Success",
