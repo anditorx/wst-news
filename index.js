@@ -66,7 +66,7 @@ app.use((error, req, res, next) => {
 });
 
 // serve
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 mongoose
   .connect(
     "mongodb+srv://andito:rYzyTIVsJSDcqSsd@cluster0.7xk47.mongodb.net/myBlog?retryWrites=true&w=majority"
