@@ -52,7 +52,7 @@
                         "required": true
                     },
                     "image": {
-                        "type": "string",
+                        "type": "file",
                         "required": true
                     },
                     "author": {
@@ -94,7 +94,7 @@
                     "category"
                 ],
                 "produces": [
-                    "application/json"
+                    "multipart/form-data"
                 ],
                 "parameters": [
                     {
