@@ -37,7 +37,7 @@
             }
             
         },
-        "/news?category=": {
+        "/news?category={category}": {
             "get": {
                 "description": "Get news by category",
                 "tags": [
