@@ -26,11 +26,8 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Category"
-                                }
-                            }
+                            "application/json": {},
+                            "application/xml": {}
                         }
                     }
                 }
@@ -46,11 +43,8 @@
                     "200": {
                         "description": "Success",
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/News"
-                                }
-                            }
+                            "application/json": {},
+                            "application/xml": {}
                         }
                     }
                 }
