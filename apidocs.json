@@ -11,7 +11,7 @@
             "description": "production"
         },
         {
-            "urlDev": "http://localhost:3030/v1/api",
+            "url": "http://localhost:3030/v1/api",
             "description": "development"
         }
     ],
@@ -35,6 +35,33 @@
                     }
                 }
             }
+            
+        },
+        "/news?category=": {
+            "get": {
+                "description": "Get news by category",
+                "tags": [
+                    "news"
+                ],
+                "parameters": [
+                    {
+                        "category": "Teknologi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/News"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+        
     }
 }
