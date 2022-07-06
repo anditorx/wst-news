@@ -45,7 +45,11 @@
                 ],
                 "parameters": [
                     {
-                        "category": "Teknologi"
+                        "name": "category",
+                        "in": "path",
+                        "description": "Category",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
