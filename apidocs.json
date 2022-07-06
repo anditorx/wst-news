@@ -2,9 +2,11 @@
     "openapi": "3.0.0",
     "info": {
         "title": "wst-news",
-        "description": "web service test - news",
+        "description": "web service test - news | repo: https://github.com/anditorx/wst-news",
         "version": "1.0.0"
     },
+    "host": "https://wst-news.herokuapp.com",
+    "basePath": "/v1/api",
     "servers": [
         {
             "url": "https://wst-news.herokuapp.com/v1/api",
