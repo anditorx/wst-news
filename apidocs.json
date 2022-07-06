@@ -16,6 +16,37 @@
         }
     ],
     "paths": {
+        "/category": {
+            "get": {
+                "description": "Get all category",
+                "tags": [
+                    "category"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Data Not Found",
+                        "content": {
+                          "application/json": {},
+                          "application/xml": {}
+                        }
+                    },
+                    "405": {
+                        "description": "Method Not Allowed",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                }
+            }
+        },
         "/news": {
             "get": {
                 "description": "Get all news",
@@ -69,38 +100,6 @@
                       }
                 }
             }
-        },
-        "/category": {
-            "get": {
-                "description": "Get all category",
-                "tags": [
-                    "category"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    },
-                    "404": {
-                        "description": "Data Not Found",
-                        "content": {
-                          "application/json": {},
-                          "application/xml": {}
-                        }
-                    },
-                    "405": {
-                        "description": "Method Not Allowed",
-                        "content": {
-                            "application/json": {},
-                            "application/xml": {}
-                        }
-                    }
-                }
-            }
         }
-        
     }
 }
