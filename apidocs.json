@@ -165,6 +165,39 @@
             }
             
         },
+        "/news/{id}": {
+            "get": {
+                "description": "Get news by id",
+                "tags": [
+                    "news"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "News Detail",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Data Not Found",
+                        "content": {
+                          "application/json": {},
+                          "application/xml": {}
+                        }
+                      }
+                }
+            }
+        },
         "/news?category={category}": {
             "get": {
                 "description": "Get news by category",
