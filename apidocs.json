@@ -1,5 +1,6 @@
 {
     "openapi": "3.0.0",
+
     "info": {
         "title": "wst-news",
         "description": "web service test - news | repo: https://github.com/anditorx/wst-news",
@@ -24,6 +25,30 @@
                 "tags": [
                     "category"
                 ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {},
+                            "application/xml": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Create new category",
+                "tags": [
+                    "category"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Category"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Success",
