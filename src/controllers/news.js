@@ -67,7 +67,10 @@ exports.getNews = (req, res, next) => {
 };
 exports.getNewsSearch = (req, res, next) => {
   NewsPost.find({
-    $or: [{ body: { $regex: req.params.key } }],
+    $or: [
+      { body: { $regex: req.params.key } },
+      { title: { $regex: req.params.key } },
+    ],
   })
     .then((result) => {
       res.status(200).json({
