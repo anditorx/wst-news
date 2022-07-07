@@ -65,6 +65,20 @@ exports.getNews = (req, res, next) => {
       next(err);
     });
 };
+exports.getNewsSearch = (req, res, next) => {
+  NewsPost.find({
+    $or: [{ body: { $regex: req.params.key } }],
+  })
+    .then((result) => {
+      res.status(200).json({
+        message: "Success get data",
+        data: result,
+      });
+    })
+    .catch((err) => {
+      next(err);
+    });
+};
 
 exports.getNewsByID = (req, res, next) => {
   const id = req.params.id;
@@ -120,7 +134,6 @@ exports.createNews = (req, res, next) => {
       });
     })
     .catch((err) => {
-      console.log("Error [create news] => ", err);
       next(err);
     });
 };
@@ -181,7 +194,6 @@ exports.deleteData = (req, res, next) => {
         err.errorStatus = 404;
         throw err;
       }
-      console.log("post", post);
       // hapus image
       removeImage(post.image);
       // hapus dari database

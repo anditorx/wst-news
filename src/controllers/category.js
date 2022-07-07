@@ -65,7 +65,6 @@ exports.createCategory = (req, res, next) => {
       });
     })
     .catch((err) => {
-      console.log("Error [create new category] => ", err);
       next(err);
     });
 };
